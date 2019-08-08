@@ -1,5 +1,5 @@
 ---
-title: What is TC39 and why should we care?
+title: What is TC39 and why should you care?
 description: Post about TC39 and why software engineers should be interested in it
 date: "2019-08-07T23:46:37.121Z"
 ---
@@ -15,7 +15,7 @@ Therefore, instead of just applying the language and seeing it as *magic*, I tho
 
 # What is TC39?
 
-> In short, TC39 means Technical Committee number 39. It is part of ECMA, the institution which standardizes the JavaScript language under the “ECMAScript” specification.
+> TC39 means Technical Committee number 39. It is part of ECMA, the institution which standardizes the JavaScript language under the “ECMAScript” specification.
 
 It's probably useful to start looking at TC39 by answering some of the frequently asked questions.
 
@@ -27,7 +27,7 @@ It's probably useful to start looking at TC39 by answering some of the frequentl
 
 **Q**: What is the difference between ECMAScript and JavaScript?
 
-**A**: ECMAScript is a standard of scripting languages, while JavaScript is the implementation of ECMAScript. There are other languages such as ActionScript that implement ECMAScript.
+**A**: ECMAScript is a standard of scripting languages, while JavaScript is the implementation of ECMAScript. There are other languages such as ActionScript that implements ECMAScript.
 
 **Q**: Where can I find more information about TC39
 
