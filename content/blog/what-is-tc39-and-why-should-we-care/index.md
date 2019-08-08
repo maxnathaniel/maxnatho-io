@@ -1,5 +1,6 @@
 ---
 title: What is TC39 and why should we care?
+description: Post about TC39 and why software engineers should be interested in it
 date: "2019-08-07T23:46:37.121Z"
 ---
 
