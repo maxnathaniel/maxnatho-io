@@ -1,11 +1,11 @@
 ---
 title: What is TC39 and why should you care?
-description: Post about TC39 and why software engineers should be interested in it
+description: I woke up one day and thought it's a brilliant idea to read about TC39.
 date: "2019-08-07T23:46:37.121Z"
 ---
 
 # Why am I writing about TC39?
-I woke up one day and thought it's a brilliant idea to follow TC39. 
+I woke up one day and thought it's a brilliant idea to read about TC39. 
 
 Well, of course not. It doesn't work that way, for most of us at least.
 

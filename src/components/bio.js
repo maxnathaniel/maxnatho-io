@@ -56,7 +56,7 @@ const Bio = () => {
       <p>
         Written by <strong>{author}</strong> who lives in Singapore. Made a decisive and life changing 
         career switch 4 years ago and never looked back since. Aspires to work in
-        San Fran for the next stage of his tech career.
+        San Fran for his next tech gig.
         {`  `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You can follow him on Twitter
