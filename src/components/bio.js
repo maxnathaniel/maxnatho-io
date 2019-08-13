@@ -55,8 +55,8 @@ const Bio = () => {
       />
       <p>
         Written by <strong>{author}</strong> who lives in Singapore. Made a decisive and life changing 
-        career switch 4 years ago and never looked back since. Aspires to work in
-        San Fran for his next tech gig.
+        career switch to tech 5 years ago and never looked back since. Open to work in
+        SF/LA for his next tech gig.
         {`  `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You can follow him on Twitter
