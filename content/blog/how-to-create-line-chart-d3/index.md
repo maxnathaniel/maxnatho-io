@@ -11,7 +11,7 @@ That's about it. I would add that it's the most powerful and customizable JavaSc
 
 You can follow this link [D3.js](https://https://d3js.org/) to D3's official website.
 
-But if you are here, I assume you already know what D3, so let's dive straight into the code.
+But if you are here, I assume you already know what D3, so let's dive straight into the code. Before we being, I should say that I took the example from [here](https://observablehq.com/@d3/line-chart). I decomposed the code and explained each section to ensure that you understand exactly what is going on.
 
 We first load the data using the `csv` method. It returns a promise so we grab the data from within the `then()` method.
 
@@ -111,6 +111,31 @@ svg.append("path")
   .attr("d", line);
 });
 ```
+In the previous section, it looks fairly simple. But you might be wondering - How does the `call()` method work, and who invokes the `xAxis` and `yAxis` functions?
+
+From the documentation -
+> Invokes the specified function exactly once, passing in this selection along with any optional arguments. Returns this selection. This is equivalent to invoking the function by hand but facilitates method chaining.
+
+You can find the link here [.call](https://github.com/d3/d3-selection#selection_call).
+
+From the documentation, it is clear that the `specified` function (in this case, `xaxis` and `yAxis`) passed in will be invoked exactly once. The argument `g` is implicitly passed into both functions in case you are wondering.
+
+If you wish to investigate further, check out the source code [here](https://github.com/d3/d3-selection/blob/master/src/selection/call.js).
+
+```javascript
+export default function() {
+  var callback = arguments[0];
+  arguments[0] = this;
+  callback.apply(null, arguments);
+  return this;
+}
+```
+
+* `callback.apply(null, arguments)` is responsible for invoking the `specified` function passed into `call()`.
+
+* `arguments[0] = this` assign the `svg` object to the first element in the `arguments` array, which means that `g` refers to the `svg` object. How do we know that `this` refers to the `svg` object? Refer to the execution context of `.call()`. The `append()` method returns the `DOM` or `svg` element with the appended element. Therefore, when we chain `.call()` onto `append()`, the `this` value refers to the `svg` element because `call()` belongs to the `svg` element created from the `append()` invokation. If you are still unclear about how `this` works, you can read up more about `this` and `lexcial scopes`. I personally enjoyed reading [this](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch1.md).
+
+Finally, we create a new `path` and pass the `data` into the almost-completed chart with this line `.datum(data)`.
 
 There we have it!
 
