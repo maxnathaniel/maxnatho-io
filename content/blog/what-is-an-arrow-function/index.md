@@ -4,7 +4,7 @@ description: Explanation on what an arrow function is
 date: "2020-08-31T23:46:37.121Z"
 ---
 
-An arrow function is a new (or not so new) feature in JavaScript `ES6`, along with many other interesting features. Not to be confused with `Java`'s arrow operator, which looks like this `->`, JavaScript's arrow function is also known as `fat arrow`.
+An arrow function is a new (or not so new) feature in JavaScript ES6, along with many other interesting features. Not to be confused with `Java`'s arrow operator, which looks like this `->`, JavaScript's arrow function is also known as `fat arrow`.
 
 ```javascript
 // ES5 (pre arrow function)
@@ -22,9 +22,9 @@ ALthough the 2 examples produce the same result, there is a main difference betw
 
 2. They do not get their own `arguments` object, `super`, `new.target`.
 
-Point 2 is pretty self explanatory so I will pass over it.
+**Point 2** is pretty self explanatory so I will pass over it.
 
-Let's take a look at the implications of Point 1.
+Let's take a look at the implications of **Point 1**.
 
 ```javascript
 const obj = {
@@ -43,9 +43,13 @@ obj.getA() === 10;
 obj.getB() === 20;
 ```
 
-The last 2 examples returns `False` because `this` value in `getA()` and `getB()` refers to the `window` object because arrow functions do not have their own `this` value.
+The last 2 examples returns `False` because `this` value in `getA()` and `getB()` refers to the `window` object because arrow functions do not have their own `this` value. Therefore, `this.getA()` and `this.getB()` both return undefined.
 
-Maybe you thought of a clever way to work around this rule - You decide to rebind the `this` value! Nope, you cannot rebind the `this` value for `getA()` and `getB()` even if you wanted to. Well, you technially can rebind it. It will just be ignored.
+Maybe you thought of a clever way to work around this rule - You decide to rebind the `this` value. Yes, that's right! That should work, you figured.
+
+Unfortuntately, JavaScript always find a way to frustrate you. You cannot rebind the `this` value for `getA()` and `getB()` even if you wanted to. Well, you technially can rebind it. It will just be ignored.
+
+Why is the arrow function specified and implemented this way? I must admit that I am not aware of the discussions surrounding the specifications, but here's a [start](https://esdiscuss.org/topic/a-few-arrow-function-specification-issues) if anyone wishes to explore further.
 
 ```javascript
 // the following is allowed but the this value will not be updated
