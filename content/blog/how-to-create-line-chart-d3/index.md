@@ -133,7 +133,7 @@ export default function() {
 
 * `callback.apply(null, arguments)` is responsible for invoking the `specified` function passed into `call()`.
 
-* `arguments[0] = this` assign the `svg` object to the first element in the `arguments` array, which means that `g` refers to the `svg` object. How do we know that `this` refers to the `svg` object? Refer to the execution context of `.call()`. The `append()` method returns the `DOM` or `svg` element with the appended element. Therefore, when we chain `.call()` onto `append()`, the `this` value refers to the `svg` element because `call()` belongs to the `svg` element created from the `append()` invokation. If you are still unclear about how `this` works, you can read up more about `this` and `lexcial scopes`. I personally enjoyed reading [this](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch1.md).
+* `arguments[0] = this` assign the `svg` object to the first element in the `arguments` array, which means that `g` refers to the `svg` object. How do we know that `this` refers to the `svg` object? Refer to the execution context of `.call()`. The `append()` method returns the `DOM` or `svg` element with the appended element. Therefore, when we chain `.call()` onto `append()`, the this value refers to the svg element because call() belongs to the svg element created from the `append()` invokation. If you are still unclear about how this works, you can read up more [here](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch1.md).
 
 Finally, we create a new `path` and pass the `data` into the almost-completed chart with this line `.datum(data)`.
 
