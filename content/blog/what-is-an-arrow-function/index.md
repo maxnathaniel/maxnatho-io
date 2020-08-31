@@ -30,8 +30,8 @@ Let's take a look at the implications of **Point 1**.
 const obj = {
   a: 10,
   b: 20,
-  getA: () => return this.a,
-  getB: () => return this.b
+  getA: () => this.a,
+  getB: () => this.b
 };
 
 // both returns True
