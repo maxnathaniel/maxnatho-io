@@ -114,4 +114,4 @@ svg.append("path")
 
 There we have it!
 
-![Line Chart](../../assets/d3-line-chart.png)
+![Line Chart](../../assets/d3-line-chart.png width=800)
