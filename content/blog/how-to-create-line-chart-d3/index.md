@@ -108,6 +108,6 @@ svg.append("path")
 
 There we have it!
 
-![Line Chart](./d3-line-chart.png)
+![Line Chart](https://github.com/maxnathaniel/maxnatho-io/blob/master/content/assets/d3-line-chart.png)
 
 
