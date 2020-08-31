@@ -9,7 +9,7 @@ date: "2020-08-31T23:46:37.121Z"
 
 That's about it. I would add that it's the most powerful and customizable JavaScript charting library out there right now. You can do virtually anything you want with it.
 
-[D3.js](https://https://d3js.org/)
+You can follow this link [D3.js](https://https://d3js.org/) to D3's official website.
 
 But if you are here, I assume you already know what D3, so let's dive straight into the code.
 
@@ -18,6 +18,10 @@ We first load the data using the `csv` method. It returns a promise so we grab t
 ```javascript
 d3.csv("/data.csv", d3.autoType)
 ```
+`d3.autoType` infers the types of values in the object and coerces them. In our example, we actually want the values to be coerced to `number`.
+
+You can find more information here [d3.autoType](https://github.com/d3/d3-dsv#autoType).
+
 Next, we transform the raw data to our own format.
 
 ```javascript
@@ -81,6 +85,8 @@ We will cover some of the interesting pieces in the code above.
 
 * `d3.extent` returns the `min` and `max` value of the array.
 
+* `.domain([0, d3.max(data, d => d.value)]).nice()` ensures that the `y axis`'s domain values are rounded off nicely.
+
 * `.call(g => g.select(".tick:last-of-type text").clone()` basically clones the last item in the y-axis.
 
 The rest of the code basically appends the various elements onto the `DOM`.
@@ -108,6 +114,4 @@ svg.append("path")
 
 There we have it!
 
-![Line Chart](https://github.com/maxnathaniel/maxnatho-io/blob/master/content/assets/d3-line-chart.png)
-
-
+![Line Chart](../../assets/d3-line-chart.png)
