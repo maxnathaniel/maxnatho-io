@@ -60,6 +60,7 @@ class Layout extends React.Component {
           marginRight: `auto`,
           maxWidth: rhythm(40),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          textAlign: `center`
         }}
       >
         <header>{header}</header>
