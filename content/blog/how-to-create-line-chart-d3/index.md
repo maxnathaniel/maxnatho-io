@@ -13,12 +13,12 @@ You can follow this link [D3.js](https://https://d3js.org/) to D3's official web
 
 But if you are here, I assume you already know what D3, so let's dive straight into the code. Before we being, I should say that I took the example from [here](https://observablehq.com/@d3/line-chart). I decomposed the code and explained each section to ensure that you understand exactly what is going on.
 
-We first load the data using the `csv` method. It returns a promise so we grab the data from within the `then()` method.
+We first load the data using the **csv** method. It returns a promise so we grab the data from within the `then()` method.
 
 ```javascript
 d3.csv("/data.csv", d3.autoType)
 ```
-`d3.autoType` infers the types of values in the object and coerces them. In our example, we actually want the values to be coerced to `number`.
+`d3.autoType` infers the types of values in the object and coerces them. In our example, we actually want the values to be coerced to **number** type.
 
 You can find more information here [d3.autoType](https://github.com/d3/d3-dsv#autoType).
 
@@ -34,7 +34,7 @@ If you are using ES6, you can destructure it like this -
 const data = Object.assign(d.map(({ date, close }) => ({ date, value: close } )), { y: "$ Close" });
 ```
 
-We set some defaults and proceed to create the main `line` charting object. Fairly straightforward stuff here.
+We set some defaults and proceed to create the main **line** charting object. Fairly straightforward stuff here.
 
 ```javascript
 const height = 400;
@@ -83,13 +83,13 @@ const yAxis = g => g
 
 We will cover some of the interesting pieces in the code above.
 
-* `d3.extent` returns the `min` and `max` value of the array.
+* `d3.extent` returns the **min** and **max** value of the array.
 
-* `.domain([0, d3.max(data, d => d.value)]).nice()` ensures that the `y axis`'s domain values are rounded off nicely.
+* `.domain([0, d3.max(data, d => d.value)]).nice()` ensures that the **y axis**'s domain values are rounded off nicely.
 
 * `.call(g => g.select(".tick:last-of-type text").clone()` basically clones the last item in the y-axis.
 
-The rest of the code basically appends the various elements onto the `DOM`.
+The rest of the code basically appends the various elements onto the **DOM**.
 
 ```javascript
 const svg = d3.select("svg")
@@ -118,7 +118,7 @@ From the documentation -
 
 You can find the link here [.call](https://github.com/d3/d3-selection#selection_call).
 
-From the documentation, it is clear that the `specified` function (in this case, `xaxis` and `yAxis`) passed in will be invoked exactly once. The argument `g` is implicitly passed into both functions in case you are wondering.
+From the documentation, it is clear that the **specified** function (in this case, **xaxis** and **yAxis**) passed in will be invoked exactly once. The argument **g** is implicitly passed into both functions in case you are wondering.
 
 If you wish to investigate further, check out the source code [here](https://github.com/d3/d3-selection/blob/master/src/selection/call.js).
 
@@ -133,9 +133,9 @@ export default function() {
 
 * `callback.apply(null, arguments)` is responsible for invoking the specified function passed into `call()`.
 
-* `arguments[0] = this` assigns the `svg` object to the first element in the `arguments` array, which means that `g` refers to the `svg` object. How do we know that `this` refers to the svg object? Refer to the execution context of `.call()`. The `append()` method returns the `svg` element with the appended element. Therefore, when we chain `.call()` onto `append()`, the this value refers to the svg element because call() belongs to the svg element created from the append() invokation. If you are still unclear about how this works, you can read up more [here](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch1.md).
+* `arguments[0] = this` assigns the **svg** object to the first element in the **arguments** array, which means that **g** refers to the **svg** object. How do we know that **this** refers to the svg object? Refer to the execution context of `.call()`. The `append()` method returns the **svg** element with the appended element. Therefore, when we chain `.call()` onto `append()`, the this value refers to the svg element because call() belongs to the svg element created from the append() invokation. If you are still unclear about how this works, you can read up more [here](https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/this%20%26%20object%20prototypes/ch1.md).
 
-Finally, we create a new `path` and pass the `data` into the almost-completed chart with this line `.datum(data)`.
+Finally, we create a new **path** and pass the **data** into the almost-completed chart via this line of code: `.datum(data)`.
 
 There we have it!
 
