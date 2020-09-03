@@ -1,16 +1,16 @@
 ---
-title: Webpack for beginners (Part 1)
+title: Webpack for beginners (Part 1) [JavaScript]
 description: Let's start with what webpack.js.org tells us about the core concepts.
 date: "2019-08-09T13:46:37.121Z"
 ---
 
 **Estimated Read Time: 10 mins**
 
-Before you start reading this post, let's check if you if you fall under the following category: 
+Before you start reading this post, let's check if you if you fall under the following category:
 
 * You are convinced of the reasons for using Webpack as your project's module bundler.
 
-* You know how to install webpack as a dev dependency in your project. 
+* You know how to install webpack as a dev dependency in your project.
 
 Now, let's get into it.
 
@@ -20,9 +20,9 @@ Let's start with what [webpack.js.org](https://webpack.js.org/concepts/) tells u
 
 > At its core, webpack is a static module bundler for modern JavaScript applications. When webpack processes your application, it internally builds a dependency graph which maps every module your project needs and generates one or more bundles.
 
-That was pretty straightforward. So essentially, Webpack takes **ALL** your source code, together with your **installed packages** (React, Redux, Lodash, etc), and creates one or many bundles (depending on your config) for both **DEV** and **PROD** environments. 
+That was pretty straightforward. So essentially, Webpack takes **ALL** your source code, together with your **installed packages** (React, Redux, Lodash, etc), and creates one or many bundles (depending on your config) for both **DEV** and **PROD** environments.
 
-For the purpose of explaining Webpack, we will refer to React Boilerplate (link found [here](https://github.com/react-boilerplate/react-boilerplate). Taking reference from a Boilerplate just makes life easier to begin with. You can always choose to start from scratch or edit the webpack config files once you have a good understanding. 
+For the purpose of explaining Webpack, we will refer to React Boilerplate (link found [here](https://github.com/react-boilerplate/react-boilerplate). Taking reference from a Boilerplate just makes life easier to begin with. You can always choose to start from scratch or edit the webpack config files once you have a good understanding.
 
 # Show me some code!
 
@@ -38,7 +38,7 @@ Refer to **package.json** for the configuration options. We will break them down
 
 The first thing it does is to set the environment to **production** seen in **NODE_ENV=production**.
 
-Next, it runs wepback and passes along several options such as 
+Next, it runs wepback and passes along several options such as
 
 ```json{numberLines: false}
 internals/webpack/webpack.prod.babel.js
@@ -80,13 +80,13 @@ This enables debugging messages for cases for modules that cannot be optimized b
 
 # The configuration files
 
-The wepback configurations are split into 3 files. 
+The wepback configurations are split into 3 files.
 
-* webpack.base.babel.js 
+* webpack.base.babel.js
 * webpack.dev.babel.js
 * webpack.prod.babel.js
 
-The base file ontains the common configuration to both **development** and **production** environments. 
+The base file ontains the common configuration to both **development** and **production** environments.
 
 Now, if you're new to Webpack, you will most likely try to get the most basic version of the config working. And gradually, code bloat will crep up on you. One day, you will notice that the config file has become a monster with plenty of code duplication. That's the point where you will want to de-dup your code and extract the common config to a common file.
 
@@ -112,7 +112,7 @@ module.exports = options => ({
   optimization: options.optimization,
 ```
 
-The above code block takes in a few options and sets it to the respective setting type. **options** is a basic javaScript object that contains **mode**, **entry**, and **output** that is passed in from **webpack.dev.babel.js** or **webpack.prod.babel.js** files. 
+The above code block takes in a few options and sets it to the respective setting type. **options** is a basic javaScript object that contains **mode**, **entry**, and **output** that is passed in from **webpack.dev.babel.js** or **webpack.prod.babel.js** files.
 
 **Mode** is typically **development** or **production**.
 
@@ -124,7 +124,7 @@ The above code block takes in a few options and sets it to the respective settin
 
 # Loaders vs Plugins
 
-Although these two concepts are central to Webpack, they are not exactly intuitive. In my personal experience, I read about it once or twice and forget about what they mean. It's probably until the 3rd or 4th time that I finally register it permanently. 
+Although these two concepts are central to Webpack, they are not exactly intuitive. In my personal experience, I read about it once or twice and forget about what they mean. It's probably until the 3rd or 4th time that I finally register it permanently.
 
 At a high level, let's take a look at what these two concepts actually mean.
 
@@ -187,7 +187,7 @@ That allows you to left out the file type while importing files. Cool huh?
 
 # In Closing
 
-Phew... Ok I think that's pretty much enough for today. 
+Phew... Ok I think that's pretty much enough for today.
 
 The Webpack core team has actually made Webpack a lot easier to configure since version 1 by simplying the configuration required and the documentation is comprehensive and pretty beginner-friendly. So if you feel up for it, take a look at the official webpack documentation [here](https://webpack.js.org/concepts/) and figure things out on your own.
 

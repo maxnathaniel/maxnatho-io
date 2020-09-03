@@ -1,5 +1,5 @@
 ---
-title: How to create a Basic Line Chart in D3.js
+title: How to create a Basic Line Chart in D3.js [JavaScript]
 description: Tutorial on creating a Basic Line Chart in D3.js
 date: "2020-08-31T23:46:37.121Z"
 ---

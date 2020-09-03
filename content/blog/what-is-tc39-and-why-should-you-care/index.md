@@ -1,11 +1,11 @@
 ---
-title: What is TC39 and why should you care?
+title: What is TC39 and why should you care? [JavaScript]
 description: I woke up one day and thought it's a brilliant idea to read about TC39.
 date: "2019-08-07T23:46:37.121Z"
 ---
 
 # Why am I writing about TC39?
-I woke up one day and thought it's a brilliant idea to read about TC39. 
+I woke up one day and thought it's a brilliant idea to read about TC39.
 
 Well, of course not. It doesn't work that way, for most of us at least.
 
@@ -51,7 +51,7 @@ It's probably useful to start looking at TC39 by answering some of the frequentl
 
 **Stages**: A proposal will have to go through the stages stipulated in this [process document page](https://tc39.es/process-document/), which provides guidelines for evolving an addition from conception to a fully specified feature.
 
-Now that you're interested to find out more, where can I start? I'm glad you asked! Please check out the links below: 
+Now that you're interested to find out more, where can I start? I'm glad you asked! Please check out the links below:
 
 1. Sample Agenda and Meeting minutes of a TC39 Meeting found [here](https://github.com/tc39/agendas/tree/master/2019)
 2. Proposals found [here](https://github.com/tc39/proposals)

@@ -1,5 +1,5 @@
 ---
-title: What is an arrow function?
+title: What is an arrow function? [JavaScript]
 description: Explanation on what an arrow function is
 date: "2020-08-31T23:46:37.121Z"
 ---
