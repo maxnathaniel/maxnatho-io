@@ -54,12 +54,15 @@ myEmitter.on('event', () => {
 ```
 This example is taken from the `Events` [documentation](https://nodejs.org/dist/latest-v12.x/docs/api/events.html).
 
-### How does event-driven work?
-> In an event-driven application, there is generally a main loop that listens for events, and then triggers a callback function when one of those events is detected.
+### What is the Event Loop?
 
-Source: [Wikepedia](https://en.wikipedia.org/wiki/Event-driven_programming)
+TLDR:
 
-### How is Node JS non-blocking and asynchronous?
+> The event loop is what allows Node.js to perform non-blocking I/O operations — despite the fact that JavaScript is single-threaded — by offloading operations to the system kernel whenever possible. Since most modern kernels are multi-threaded, they can handle multiple operations executing in the background. When one of these operations completes, the kernel tells Node.js so that the appropriate callback may be added to the poll queue to eventually be executed.
+
+The explanation is pretty long and you can read more about it [here](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/).
+
+### Node JS is non-blocking and asynchronous
 
 #### Synchronous Operation
 In a normal synchronous world, a block of code is typically executed in sequence. It follows that each line is a blocking operation. Ordinarily, if the JavaScript code does not call any external  **API** or perform any **I/O** operation, that's fine.
