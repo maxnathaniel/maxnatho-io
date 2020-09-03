@@ -54,8 +54,7 @@ const Bio = () => {
         }}
       />
       <p>
-        Written by <strong>{author}</strong> who lives in Singapore. Made a decisive and life changing 
-        career switch to tech 5 years ago and has not looked back since. Looking for an overseas role for his next gig.
+        Written by <strong>{author}</strong> who lives in Singapore. Pivoted to tech tech 5+ years ago and loves tinkering with all things technology.
         {`  `}
         <a href={`https://twitter.com/${social.twitter}`}>
           You can follow him on Twitter
