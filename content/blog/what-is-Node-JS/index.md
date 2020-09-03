@@ -1,7 +1,7 @@
 ---
 title: What is Node JS?
 description: Some insights into Node JS
-date: "2019-09-03T23:46:37.121Z"
+date: "2020-09-03T23:46:37.121Z"
 ---
 
 ## What is Node JS?
@@ -16,9 +16,13 @@ date: "2019-09-03T23:46:37.121Z"
 
 > V8 is Google’s open source high-performance JavaScript and WebAssembly engine, written in C++. It is used in Chrome and in Node.js, among others. It implements ECMAScript and WebAssembly, and runs on Windows 7 or later, macOS 10.12+, and Linux systems that use x64, IA-32, ARM, or MIPS processors. V8 can run standalone, or can be embedded into any C++ application.
 
+Source: [V8](https://v8.dev/)
+
 ### What does event-driven mean?
 
 > event-driven programming is a programming paradigm in which the flow of the program is determined by events such as user actions (mouse clicks, key presses), sensor outputs, or messages from other programs/threads.
+
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Event-driven_programming)
 
 Sounds about right. To add, the event-driven architecture in Node JS is built upon the `Publish-Subscribe (pub-sub)` or `Observer` pattern. Therefore, you will see a lot of these in the Node JS API.
 
