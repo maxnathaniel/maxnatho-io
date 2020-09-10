@@ -6,7 +6,7 @@ date: "2020-09-10T23:46:37.121Z"
 
 The following article attempts to explain what came before **Docker**, what **Containers** are and why it's a good idea to use **Docker** in your development and production environment. It's not a tutorial on how to use Docker. Perhaps I will create one in the future. In the meantime, you can refer to the **Docker** [website](https://www.docker.com/) for more information as well as tutorials.
 
-## Pre Containers
+### Pre Containers
 
 Before Docker, developers used **VMs (Virtual Machines)** to deploy, ship and run software. You can think of **VM** as a computer within a computer. Within a **VM**, a user has access to the same applications, user interfaces and settings as if it were your own computer. Therefore, it is possbible to run what appears to be multiple computers on a single machine.
 
@@ -42,6 +42,6 @@ You can quickly create new containers on demand. When using multiple containers 
 4. Faster and Safer CI/CD
 The portability and performance benefits offered by containers can help you make your development process more agile and responsive. On top of that, it provides safety knowing that the **Image** you deliver will work exactly the way it was tested in the test environment.
 
-## Conclusion
+### Conclusion
 
 To summarize, **Docker** is a fantastic option for developers and has become, perhaps, the de-facto choice for most. There's nothing not to like about it, and if your organisation allows for it, it's a game-changer. The hype is real, and is here to stay.
