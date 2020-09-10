@@ -44,4 +44,4 @@ The portability and performance benefits offered by containers can help you make
 
 ## Conclusion
 
-To summarize, **Docker** is a fantastic option for developers and has become, perhaps, the de-facto choice for most. There's nothing not to like about it, and if your organisation allows for, it's a game-changer. The hype is real, and is here to stay.
+To summarize, **Docker** is a fantastic option for developers and has become, perhaps, the de-facto choice for most. There's nothing not to like about it, and if your organisation allows for it, it's a game-changer. The hype is real, and is here to stay.
